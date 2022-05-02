@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  
+  web:
+    build:
+       context: ./services/api
+    command: uvicorn main:app --host 0.0.0.0 --port 5000
+    ports:
+      - 5000:5000
+
+    volumes:
+           
+      - './home/sachin/test/files:/files'
